@@ -1,0 +1,171 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/TableLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    android:stretchColumns="0,3"
+    android:gravity="center_vertical"
+    android:background="@mipmap/z123">
+
+    <TableRow>
+        <TextView />
+        <TextView
+            style="@style/MyTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户名:"/>
+        <EditText
+            android:id="@+id/re_name"
+            style="@style/MyHintStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="请输入用户名"
+            android:maxLength="4"
+            android:minWidth="150dp"/>
+        <TextView />
+    </TableRow>
+
+    <TextView />
+
+    <TableRow>
+        <TextView />
+        <TextView
+            style="@style/MyTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="密    码:" />
+        <EditText
+            android:id="@+id/re_pwd"
+            style="@style/MyHintStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="请输入密码"
+            android:maxLength="15"
+            android:minWidth="150dp" />
+        <TextView />
+    </TableRow>
+
+    <TextView />
+
+    <TableRow>
+        <TextView />
+        <TextView
+            style="@style/MyTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="再次输入密码:" />
+        <EditText
+            android:id="@+id/re_pwd2"
+            style="@style/MyHintStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="请再次输入密码"
+            android:maxLength="15"
+            android:minWidth="150dp" />
+        <TextView />
+    </TableRow>
+
+    <TextView />
+
+    <TableRow>
+        <TextView />
+        <TextView
+            style="@style/MyTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="邮    箱:" />
+        <EditText
+            android:id="@+id/re_mail"
+            style="@style/MyHintStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="请输入邮箱"
+            android:maxLength="20"
+            android:minWidth="150dp" />
+        <TextView />
+    </TableRow>
+
+    <TextView />
+
+    <TableRow>
+        <TextView />
+        <TextView
+            style="@style/MyTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手机号:" />
+        <EditText
+            android:id="@+id/re_phone"
+            style="@style/MyHintStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="请输入手机号"
+            android:maxLength="11"
+            android:minWidth="150dp" />
+        <TextView />
+    </TableRow>
+
+    <TextView />
+
+    <TableRow>
+        <TextView />
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/MyTextViewStyle"
+            android:text="性    别:" />
+
+        <RadioGroup
+            android:id="@+id/rg_sex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <RadioButton
+                android:id="@+id/Male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:textColor="@color/hotpink"
+                android:text="男" />
+
+            <RadioButton
+                android:id="@+id/FeMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/hotpink"
+                android:text="女" />
+        </RadioGroup>
+        <TextView />
+    </TableRow>
+
+    <TextView />
+
+    <TableRow>
+        <TextView />
+        <Button
+            style="@style/MyButtonStyle"
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#0000"
+            android:text="直接登录"/>
+        <Button
+            style="@style/MyButtonStyle"
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#0000"
+            android:text="注册"/>
+        <TextView />
+    </TableRow>
+
+</TableLayout>

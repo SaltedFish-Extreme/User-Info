@@ -1,0 +1,129 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/TableLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShowActivity"
+    android:stretchColumns="0,3"
+    android:gravity="center_vertical"
+    style="@style/MyTextViewStyle"
+    android:background="@mipmap/z789">
+
+    <TextView />
+    <TextView />
+
+    <TableRow>
+        <TextView />
+        <TextView
+            style="@style/MyTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户名:"/>
+        <TextView
+            android:id="@+id/sw_name"
+            style="@style/MyTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="用户名"
+            android:minWidth="150dp"/>
+        <TextView />
+    </TableRow>
+
+    <TextView />
+    <TextView />
+
+    <TableRow>
+        <TextView />
+        <TextView
+            style="@style/MyTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="密    码:" />
+        <TextView
+            android:id="@+id/sw_pwd"
+            style="@style/MyTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="密码"
+            android:minWidth="150dp"/>
+        <TextView />
+    </TableRow>
+
+    <TextView />
+    <TextView />
+
+    <TableRow>
+        <TextView />
+        <TextView
+            style="@style/MyTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="邮    箱:" />
+        <TextView
+            android:id="@+id/sw_mail"
+            style="@style/MyTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="邮箱"
+            android:minWidth="150dp"/>
+        <TextView />
+    </TableRow>
+
+    <TextView />
+    <TextView />
+
+    <TableRow>
+        <TextView />
+        <TextView
+            style="@style/MyTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手机号:" />
+        <TextView
+            android:id="@+id/sw_phone"
+            style="@style/MyTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="手机号"
+            android:minWidth="150dp"/>
+        <TextView />
+    </TableRow>
+
+    <TextView />
+    <TextView />
+
+    <TableRow>
+        <TextView />
+        <TextView
+            style="@style/MyTextStyle"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="性    别:" />
+        <TextView
+            android:id="@+id/sw_gender"
+            style="@style/MyTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="未知"
+            android:minWidth="150dp"/>
+        <TextView />
+    </TableRow>
+
+
+    <TextView />
+    <Button
+        android:id="@+id/modify"
+        style="@style/MyButtStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#0000"
+        android:text="修改信息"/>
+    <TextView />
+
+</TableLayout>
