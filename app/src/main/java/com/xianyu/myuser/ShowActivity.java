@@ -109,17 +109,28 @@ public class ShowActivity extends AppCompatActivity {
     private void save() {
         BtnModify.setOnClickListener(v -> {
             SQLiteDatabase db = userDBHelper.getReadableDatabase();
-            try (Cursor cursor = db.query(UserDBHelper.TABLE_NAME, ORDER_COLUMNS, "name = ? AND Id != ?", new String[]{swName.getText().toString(), id + ""}, null, null, null)) {
-                if (cursor.getCount() > 0) {
-                    Toast.makeText(ShowActivity.this, "用户名已存在，请重新输入", Toast.LENGTH_SHORT).show();
-                } else if (!RegexUtil.checkChinese(swName.getText().toString()) || !RegexUtil.checkPassword(swPwd.getText().toString()) || !RegexUtil.checkEmail(swMail.getText().toString()) || !RegexUtil.checkPhone(swPhone.getText().toString())) {
-                    Toast.makeText(ShowActivity.this, "输入的信息格式有误，请重新检查确认", Toast.LENGTH_SHORT).show();
-                } else {
-                    saveDB();
-                }
-            } catch (Exception e) {
-                Toast.makeText(ShowActivity.this, "有问题，请确认", Toast.LENGTH_SHORT).show();
-            }
+            final AlertDialog.Builder normalDialog =
+                    new AlertDialog.Builder(ShowActivity.this);
+            normalDialog.setIcon(R.drawable.info);
+            normalDialog.setTitle("确认信息");
+            normalDialog.setMessage("确定提交修改吗?");
+            normalDialog.setPositiveButton("取消", null);
+            normalDialog.setNegativeButton("确定",
+                    (dialog, which) -> {
+                        try (Cursor cursor = db.query(UserDBHelper.TABLE_NAME, ORDER_COLUMNS, "name = ? AND Id != ?", new String[]{swName.getText().toString(), id + ""}, null, null, null)) {
+                            if (cursor.getCount() > 0) {
+                                Toast.makeText(ShowActivity.this, "用户名已存在，请重新输入", Toast.LENGTH_SHORT).show();
+                            } else if (!RegexUtil.checkChinese(swName.getText().toString()) || !RegexUtil.checkPassword(swPwd.getText().toString()) || !RegexUtil.checkEmail(swMail.getText().toString()) || !RegexUtil.checkPhone(swPhone.getText().toString())) {
+                                Toast.makeText(ShowActivity.this, "输入的信息格式有误，请重新检查确认", Toast.LENGTH_SHORT).show();
+                            } else {
+                                saveDB();
+                            }
+                        } catch (Exception e) {
+                            Toast.makeText(ShowActivity.this, "有问题，请确认", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+            //显示
+            normalDialog.show();
         });
     }
 
